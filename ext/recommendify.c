@@ -163,11 +163,11 @@ int main(int argc, char **argv){
       
     for(j = 0; j < reply->elements; j++){
       if(reply->element[j]->str){
-        if((n-j) > 0) {
+        if((n-j) >= 0) {
           cc_items[n-j].coconcurrency_count = atoi(reply->element[j]->str);
         }
       } else {
-        if((n-j) > 0) {
+        if((n-j) >= 0) {
           cc_items[n-j].coconcurrency_count = 0;
         }
       }   
